@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header Section Styling  */
+.header{
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+    background: black;
+    
+}
+.logo {
+    width: 5rem;
+    height: 5rem ;
+    background: yellow;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    animation: New .5s;
+    
+}
+.logo img{
+    width: 100%;
+    position: relative;
+    top: 5px;
+    
+}
+.text{
+    width: 100%;
+}
+.text h1{
+    animation: New .5s ease-out;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+}
+
+@media screen and (max-width:750px) {
+    .text h1{
+        font-size: 2rem;
+    }
+    
+}
+@media screen and (max-width:450px) {
+    .text h1{
+        font-size: 1.5rem;
+    }
+    
+}
+/* Header Section Styling ends */
+
+
+
+/* Navbar section Styling */
+
+.navbar{
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+
+}
+.linkscontainer{
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    justify-content: center;
+
+}
+.links{
+    animation: New2 .8s;
+    list-style: none;
+    text-align: center;
+    margin:0px 10px;
+    width: 150px;
+    padding: 10px;
+    transition: all .8s;
+    border-radius: 10px;
+}
+.links:hover{
+    background: yellow;
+}
+.links:hover a{
+    color: black;
+    font-size: 1.5rem;
+}
+
+.links a{
+
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+.fas{
+    color: #fff;
+    font-size: 1.5rem;
+    opacity: 0;
+    
+}
+@media screen and (max-width:1000px){
+    .links a{
+        font-size: 1rem;
+    }
+    .links:hover a{
+        font-size: 1.2rem;
+    }
+    .links{
+        width: 100px;
+    }
+}
+@media screen and (max-width:700px){
+    .linkscontainer{
+        flex-direction: column;
+        justify-content:start;
+        width: 40vw;
+       position: absolute;
+       top: 30px;
+       left: -100%;
+        background-color: black;
+        height: 100vh;
+        padding: 10px;
+        transition: all 1s;
+    }
+    .links{
+        width: 100%;
+        margin: 10px 5px;
+    }
+    .navbar{
+        display: block;
+    }
+
+    .fas{
+        opacity: 1;
+        transition: all .5s;
+        padding: 0 6px;
+        cursor: pointer;
+       margin: 5px 10px;
+    
+      
+    }
+    
+    .fas:hover{
+       animation: New3 .5s;
+    }
+    .showNav{
+        left: 0;
+    }
+    
+}
+
+
+/* Navbar section Styling ends */
+
+/* main section styling start  */
+.main{
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./images/IMG_4645.jpg);
+    background-position:center;
+    background-size: cover;
+}
+/* main section styling ends  */
+
+
+/* Animations */
+@keyframes New {
+    0%{
+       transform:scale(2);
+        opacity: 0.3;
+    }
+   
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+@keyframes New2 {
+    0%{
+       transform:scale(0.3);
+        opacity: 0.3;
+    }
+   
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+@keyframes New3{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+    
+}
